@@ -23,6 +23,10 @@ const input = prompt('Informe o valor de GC$ para saque: ');
 let valor = parseInt(input);
 const notas = [50, 10, 5, 1];
 
+while(input <=0){
+    alert('O valor informado é inválido.');
+}
+
 for (let nota of notas) {
     let qtdNotas = parseInt(valor / nota);
     document.write('GC$' +(nota)+',00 -> ' +qtdNotas+ '<br />');
