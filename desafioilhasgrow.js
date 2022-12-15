@@ -16,19 +16,19 @@ desejado pelo cliente, determine o número de cada uma das notas
 necessárias para totalizar esse valor. Por exemplo, se o Marcelo deseja
 retirar GC$ 50,00 basta entregar uma única nota de cinquenta GrowCoins.
 Se o Édson deseja retirar GC$ 72,00 será necessário entregar uma nota de
-GC$ 50,00, duas de GC$ 10,00 e duas de GC$ 1,00. */ 
+GC$ 50,00, duas de GC$ 10,00 e duas de GC$ 1,00. */
 
 const input = prompt('Informe o valor de GC$ para saque: ');
 
 let valor = parseInt(input);
 const notas = [50, 10, 5, 1];
 
-while(input <=0){
+while (input <= 0) {
     alert('O valor informado é inválido.');
 }
 
 for (let nota of notas) {
     let qtdNotas = parseInt(valor / nota);
-    document.write('GC$' +(nota)+',00 -> ' +qtdNotas+ '<br />');
+    document.write('GC$' + (nota) + ',00 -> ' + qtdNotas + '<br />');
     valor = valor % nota;
 }  
